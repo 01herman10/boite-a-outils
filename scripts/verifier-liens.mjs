@@ -3,7 +3,7 @@ import { readFileSync, existsSync, statSync, readdirSync } from "node:fs";
 import { join, dirname, resolve } from "node:path";
 
 const racine = resolve(dirname(new URL(import.meta.url).pathname), "..");
-const ignorer = new Set(["node_modules", ".git", "video", ".claude", "claude-motion"]);
+const ignorer = new Set(["node_modules", ".git"]);
 const pages = [];
 (function parcourir(dossier) {
   for (const nom of readdirSync(dossier)) {
