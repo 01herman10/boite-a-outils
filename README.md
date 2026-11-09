@@ -13,6 +13,24 @@ Site statique : tout fonctionne dans le navigateur, sans serveur, et les fichier
 | Documents PDF | `documents.html` | Devis en PDF, fusion de PDF, lecture de PDF |
 | Tableur | `tableur.html` | Ouvrir, modifier et enregistrer des fichiers Excel ou CSV ; modèle de suivi des dossiers |
 
+## Studio de motion design dans Claude Code
+
+Ce dépôt contient aussi des **compétences Claude Code** (dossier `.claude/skills/`) pour créer des vidéos animées en les décrivant.
+Ouvrez une session Claude Code sur ce dépôt et demandez simplement, par exemple :
+« Fais une vidéo de lancement pour https://mon-site.com », « Monte ces rushs et coupe les blancs », « Ajoute le sound design ».
+
+| Catégorie | Outil | Compétences | Source et licence |
+|---|---|---|---|
+| Vidéos de lancement | **Product Launch Motion** : un lien de produit devient une vidéo de lancement | `product-launch-motion` | AbubakrChan/product-launch-motion, MIT |
+| Vidéos de lancement | **Motion Graphics Skills** : 15 compétences (lancements, graphiques animés, réels) | `launch-video`, `apple-launch-film`, `animated-chart`, `milestone-reveal`, `title-sequence-3d`, `vox-explainer`, `reel-export`… | charlie947/motion-graphics-skills, MIT |
+| Montage de vos vidéos | **HyperFrames** : coupe les blancs et les ratés, ajoute animations et sous-titres | `hyperframes`, `hyperframes-cli`, `media-use`, `reverse-any-video`, `slideshow`… | heygen-com/hyperframes, Apache 2.0 |
+| Sound design | **Claude Motion** : goût du mouvement, vérification des images, moteur de sons sans échantillons | `claude-motion-design`, `sound-design`, `review-loop`, `web-sims` (outils dans `claude-motion/`) | whaleyxbt/claude-motion, MIT |
+| Fondations | **Motion Design** : les 12 principes d'animation de Disney, adaptés | `motion-design` | LottieFiles/motion-design-skill, MIT |
+
+Ces compétences s'appuient sur Node.js, ffmpeg et Chromium, et installent leurs outils (`npx hyperframes`, `npm install`) au moment où on s'en sert.
+Certaines options utilisent des services payants (voix HeyGen ou ElevenLabs, par exemple) : elles ne servent que si une clé d'API est fournie ; sinon, les compétences utilisent des solutions gratuites.
+Le fichier de licence de chaque outil est dans son dossier.
+
 ## Modèles d'IA
 
 Les moteurs d'IA tournent dans le navigateur. Les modèles sont téléchargés depuis huggingface.co au premier usage, puis gardés en cache par le navigateur :
